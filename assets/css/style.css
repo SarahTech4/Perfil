@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ :root {
+    --text-color: #fff;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --background-header: #0c0c14;
+    --background-main: #10101a;
+    --details: #5f0bb9;
+}
+
+ /* Cabeçalho vertical fixo */
+
+#headerHorizontal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--background-main);
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    z-index: 3;
+}
+
+#headerHorizontal div {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ #botaoMenu {
+     display: none;
+ }
+ 
+ label[for="botaoMenu"] {
+    cursor: pointer;
+    background: var(--details);
+    font-size: 30px;
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ #headerVertical {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--background-header);
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    overflow: hidden;
+    z-index: 3;
+ }
+ 
+ #headerVerticalCircle {
+    background: var(--details);
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    position: absolute;
+    top: -180px;
+    left: -50px;
+    z-index: -1;
+ }
+ 
+ #profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 65px 0 0;
+ }
+ 
+#profilePhoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--text-color);
+    background: url(../img/fotoperfil-cortada.png) no-repeat center center/cover;
+ }
+ 
+ #profileName {
+    margin-top: 10px;
+    letter-spacing: 2px;
+ }
+ 
+ #navMenu {
+    margin: 45px 0;
+ }
+ 
+ #navMenu a{
+    display: flex;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--border-color);
+ }
+ 
+ #navMenu ion-icon {
+    margin-right: 5px;
+ }
+ 
+ #navMenu a:nth-child(n+6) {
+    border-bottom: none;
+ }
+ 
+ #navMenu a:hover {
+    color: var(--details);
+    box-shadow: inset 3px 0 0 var(--details);
+ }
+ 
+ #navSocial {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 250px;
+    padding: 12px 0;
+ }
+ 
+ #navSocial a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 50%;
+    transition: background 0.2s;
+    padding: 8px;
+ }
+ 
+ #navSocial a:hover {
+    background: var(--details);
+ }
+ 
+ /* Conteúdo Principal */
+ 
+ main {
+    position: relative;
+    margin-left: 250px;
+    background: var(--background-main);
+    min-height: 100vh;
+    height: auto;
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+ }
+
+ section {
+    height: auto;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 90%;
+ }
+ 
+ section a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    width: 160px;
+    background: var(--details);
+    box-shadow: 3px 3px 0 var(--text-color);
+    justify-content: center;
+    padding: 10px 20px;
+ }
+ 
+ section p {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+ }
+ 
+ section h2 {
+    color: #ab60fb;
+     font-size: 30px;
+     font-weight: normal;
+     margin-bottom: 20px 0;
+ }
+ 
+ #sectionInicio {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ 
+ #sectionInicio > div {
+     width: 49%;
+     min-width: 300px;
+ }
+ 
+ #sectionInicio h1 {
+     font-size: 65px;
+     margin-bottom: 20px;
+ }
+ 
+ #sectionInicio img {
+     width: 100%;
+     border-radius: 50%;
+     border: 2px solid var(--text-color);
+ }
+ 
+ #sobreMim {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+ }
+ 
+ #sobreMim > div {
+     width: 49%;
+     min-width: 300px;
+ }
+ 
+ #sobreMimGradeFotos {
+     display: flex;
+     gap: 20px;
+ }
+ 
+ .sobreMimFoto {
+     margin-bottom: 20px;
+ }
+ 
+ #sobreMimFotosColuna2 {
+     padding-top: 50px;
+ }
+ 
+ #sobreMim img {
+     width: 100%;
+     border-radius: 20px;
+ }
+ 
+ #sobreMim h2 {
+     font-weight: bolder;
+ }
+ 
+ #sobreMimRodape {
+     display: flex;
+     justify-content: space-evenly;
+     gap: 10px;
+ }
+ 
+ .sobreMimQuantidade {
+     display: flex;
+     width: 160px;
+ }
+ 
+ .sobreMimQuantidade p:first-child {
+     font-size: 50px;
+     font-weight: bolder;
+     margin-right: 5px;
+ }
+ 
+ .sobreMimQuantidade p:last-child {
+     line-height: 1.2;
+     display: flex;
+     align-items: center;
+ }
+ 
+ #servicoGrid {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ 
+ .card {
+     width: 49%;
+     min-width: 300px;
+     background: var(--background-header);
+     margin-bottom: 20px;
+     padding: 50px;
+ }
+ 
+ .card:hover {
+     background: var(--details);
+ }
+ 
+ #servico h2 {
+     font-weight: bolder;
+ }
+ 
+ #portfolioGrid {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+ 
+ .portifolioCardImg {
+     position: relative;
+     width: 49%;
+     min-width: 300px;
+     height: 250px;
+     margin-bottom: 100px;
+ }
+ 
+ .overflow {
+     height: 100%;
+     width: 100%;
+     overflow: hidden;
+ }
+ 
+ .overflow > div {
+     height: 100%;
+ }
+ 
+ .overflow > div:hover {
+     transform: scale(1.1);
+ }
+ 
+ .overflow #img-1 {
+     background: url(..//img/projetoLinks.png) no-repeat center center/cover;
+ }
+ 
+ .portifolioCardTitulo {
+     position: absolute;
+     width: 90%;
+     height: auto;
+     background: var(--background-header);
+     bottom: -30%;
+     right: 0;
+     padding: 20px;
+ }
+ 
+ .portifolioCardTitulo p {
+     font-size: 12;
+ }
+ 
+ .portifolioCardTitulo p:last-child {
+     font-weight: bolder;
+ }
+ 
+ #contatoRow {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+ 
+ #contatoRow > div{
+     width: 49%;
+     min-width: 300px;
+     background: var(--background-header);
+     padding: 40px;
+     margin-bottom: 20px;
+ }
+ 
+ #contatoRowText div {
+     display: flex;
+     align-items: center;
+ }
+ 
+ #contatoRowText p {
+     margin: auto 0;
+ }
+ 
+ #contato input {
+     background: none;
+     border: 1px solid var(--text-color);
+     margin-bottom: 10px;
+     padding: 10px;
+ }
+ 
+ #contatoRowForm div {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ #inputName, #inputE-mail {
+    color: white;
+     width: 49%;
+ }
+ 
+ #inputSubject {
+     width: 100%;
+     color: white;
+ }
+ 
+ #contato textarea {
+    color: white;
+     background: none;
+     border: 1px solid var(--text-color);
+     width: 100%;
+     height: 100px;
+     padding: 10px;
+ }
+ 
+ @media (max-width: 1200px) {
+     #headerHorizontal {
+         display: flex;
+     }
+ 
+     #headerVertical {
+         margin-left: -250px;
+         transition: all 0.4;
+         top: 0;
+     }
+ 
+     main {
+         margin-left: 0;
+         margin-top: 70px;
+     }
+ 
+     #botaoMenu:checked ~ #headerVertical {
+         margin-left: 0;
+         transition: 0.5s;
+     }
+ 
+     #servico h2 {
+         margin-top: 70px;
+     }
+ }
+ 
+ @media (max-width: 690px) {
+ 
+     main {
+         padding-top: 70px;  
+     }
+ 
+     #sectionInicio #inicioDescricao {
+         width: 100%;
+     }
+ 
+     #sectionInicio #inicioFoto {
+         margin: 0 auto;
+     }
+ 
+     #sobreMim #sobreMimTexto {
+         width: 100%;
+     }
+ 
+     #sobreMim #sobreMimGradeFotos {
+         margin: 0 auto;
+     }
+ 
+     #sobreMim #sobreMimGradeFotos {
+         margin: 50px 0 auto;
+         width: 100%;
+     }
+ 
+     .card {
+         width: 100%;
+     }
+ 
+     .portifolioCardImg {
+         width: 100%;
+         margin-bottom: 200px;
+     }
+ 
+     #contatoRow > div {
+         width: 100%;
+     }
+ }
